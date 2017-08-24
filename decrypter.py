@@ -12,8 +12,8 @@ class Decrypter(object):
 
     def decrypt(self):
         word = ''
-        for index, i in enumerate(self.enc_word):
-            word += string.ascii_uppercase[index + self.enc_key]
+        for letter in self.enc_word:
+            word += chr(ord(letter) + self.enc_key)
         print word
 
 if __name__ == "__main__":
